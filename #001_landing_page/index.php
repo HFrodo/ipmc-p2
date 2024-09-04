@@ -19,6 +19,11 @@
 			animation: moveBackground 10s linear infinite;
 		}
 
+		ul li{
+			display: inline-block;
+			position: vertical;
+		}
+
 		@keyframes moveBackground{
 			0%{
 				background-position: 0% 100%;
@@ -34,34 +39,42 @@
 		
 		.contentbox{
 			text-align: center;
+			padding-top: 260px;
 		}
 
 		.formbox{
 			background-color: white;
-			margin-left: 20%;
-			margin-right: 20%;
+			margin-left: 500px;
+			margin-right: 500px;
+			height: 320px;
 		}
 
 		header {
 			padding: 10px;
+			list-style-type: none;
+			position: absolute;
+			top: 8px;
+			right: 16px;
+			
 		}
 
-		.headerul{
-			display: flex;
-			justify-content: ;
+		.nav{
+			/* list-style-type: none; */
+			/* display: flex;
+			justify-content: center;
 			align-items: center;
 			margin: 0;
 			padding: 0;
-			list-style-type: none;
+			list-style-type: none; */
 		}
 		.profileul{
-			list-style-type: none;
+			/* list-style-type: none; */
 		}
 		.forumsul{
-			list-style-type: none;
+			/* list-style-type: none; */
 		}
 		.formul{
-			list-style-type: none;
+			/* list-style-type: none; */
 		}
 		.register-icon{
 			width: 2%;
@@ -75,32 +88,33 @@
 		display: block;
 		}
 	</style>
+
 	<div class = "overlay">
 	<header>
 		<div class = "toggle-icon" id = "toggle-icon">
-			<ul class = headerul>
-				<li>Home</li>
-				<li>Profile
-					<nav>
-						<ul class = profileul>
-							<li>Profile Page</li>
-							<li>Newsfeed</li>
-							<li>Post Versions</li>
-						</ul>
-					</nav>
+			<nav>
+				<li><a href="#">Home</a></li>
+				<li>
+					<a href="#">Profile</a>
+					<ul class = "profileul">
+						<li><a href="#">Profile Page</a></li>
+						<li><a href="#">Newsfeed</a></li>
+						<li><a href="#">Post Versions</a></li>
+					</ul>
 				</li>
-				<li>Forums</li>
-					<nav>
-						<ul class = forumsul>
-							<li>Main Links</li>
-							<li>BuddyPress</li>
-							<li>Corporate</li>
-							<li>Forums</li>
-						</ul>
-				<li>Terms & Conditions</li>
-				<li>Events</li>
-				<li>Privacy Policy</li>
-			</ul>
+				<li>
+					<a href="#">Forums</a>
+					<ul class = forumsul>
+						<li><a href="#">Main Links</a></li>
+						<li><a href="#">BuddyPress</a></li>
+						<li><a href="#">Corporate</a></li>
+						<li><a href="#">Forums</a></li>
+					</ul>
+				</li>
+				<li><a href="#">Terms & Conditions</a></li>
+				<li><a href="#">Events</a></li>
+				<li><a href="#">Privacy Policy</a></li>
+			</nav>
 	</header>
 	<div class = "contentbox">
 		<h2>Welcome to the Biggest Social Network in the World</h2>
@@ -137,7 +151,10 @@
 					</ul>
 				</form>
 	</div>
+</body>	
+</html>	
 	<?php
+	/*
 	echo "<pre>";
 	var_dump($_GET);
 	//function to connect to database= mysqli_connect(server name, username, password, database name);
@@ -161,6 +178,6 @@
 	// }
 
 	mysqli_query($connection, $sql);
-	?>
-</body>
-</html>
+	?> 
+	*/
+
